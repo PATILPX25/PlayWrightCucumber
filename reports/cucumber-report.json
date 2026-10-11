@@ -1,0 +1,50 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "google-search;search-for-a-playwright-keyword",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search for a Playwright keyword",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Google homepage",
+            "match": {
+              "location": "file:\\D:\\Software_Tesing\\PlaywrightTypescriptWithCucumberBDD-master\\src\\tests\\stepsDefinitions\\googleSteps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1349112499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter \"Playwright\" into the search bar",
+            "match": {
+              "location": "file:\\D:\\Software_Tesing\\PlaywrightTypescriptWithCucumberBDD-master\\src\\tests\\stepsDefinitions\\googleSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51621599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "google-search",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Google Search",
+    "tags": [],
+    "uri": "src\\tests\\features\\googleFeature.feature"
+  }
+]
