@@ -1,12 +1,13 @@
-import { Given, When, Then, context, After } from "@cucumber/cucumber";
+import { Given, When, Then, context, After, setDefaultTimeout } from "@cucumber/cucumber";
 import { chromium, Browser, Page } from "playwright";
 import { expect } from "@playwright/test";
+setDefaultTimeout(60*1000)
 
 let browser: Browser;
 let page: Page;
 
 Given("I open the Google homepage", async ()=> {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: true });
   const context = await browser.newContext();
   page = await context.newPage();
 
