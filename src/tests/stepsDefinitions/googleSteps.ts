@@ -1,4 +1,4 @@
-import { Given, When, Then, context } from "@cucumber/cucumber";
+import { Given, When, Then, context, After } from "@cucumber/cucumber";
 import { chromium, Browser, Page } from "playwright";
 import { expect } from "@playwright/test";
 
@@ -22,8 +22,14 @@ When('I enter {string} into the search bar', async function (searchText: string)
 When("I click the Search button", async function () {
   // Google hides the button until Enter is pressed
   await page.keyboard.press("Enter");
+  console.log("This is click");
+  
 });
 
-Then('close browser', async function () {
-  await browser.close();
-});
+After(async function name() {
+  try{
+    if(page) await page.close();
+    if(browser) await browser.close();
+  }
+  catch(e){}
+})
